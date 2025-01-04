@@ -9,10 +9,26 @@ https://d-nb.info/1248317343/34
 3. Bank of England´s Bank Rate 
 https://www.bankofengland.co.uk/boeapps/database/Bank-Rate.asp
 
+4. Output gaps, inflation and financial cycles in the United Kingdom
+https://www.bankofengland.co.uk/-/media/boe/files/working-paper/2016/output-gaps-inflation-and-financial-cycles-in-the-uk.pdf
+
+5. Output gap measurement: judgement and uncertainty
+https://obr.uk/docs/dlm_uploads/WorkingPaperNo5.pdf
+
 DATASETS for [ England ; Q3 97 ; Q2 07 ]
 Nominal Rates 
-Output gaaap
-Inflation
+Output gap (Expected)
+Inflation gap
 
+
+How I got Output Gap?
+First I got the absolute quarterly GDP for the time period [Office for National Statistics]:
+https://www.ons.gov.uk/economy/grossdomesticproductgdp/timeseries/ybha/qna
+
+I got the yearly output gap [Office for Budget Responsibility (OBR)]
+https://obr.uk/public-finances-databank-2024-25/
+
+Using the quarterly estimates developed [OBR: Output gap measurement: judgement and uncertainty] I replicated the shape of the quarterly output gaps in %.
+https://obr.uk/docs/dlm_uploads/WorkingPaperNo5.pdf
 
 
