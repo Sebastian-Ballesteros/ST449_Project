@@ -2,6 +2,8 @@
 ## Authors 46679 - 41830 - 49770 - 45232
 This repository contains the implementation of models and simulations used to optimize monetary policy using reinforcement learning and traditional approaches. Below is the directory layout and basic usage instructions.
 
+As a rule of thumb .ipynb files contain the same code as the .py files of the same name. Ipynb files contain a step by step rundown of how the code works, aswell as some additional performance metrics. .py files of the same name were included for importing aswell as performance improvements when training.
+
 ---
 
 ## Directory Layout
