@@ -3,6 +3,11 @@ import numpy as np
 import pandas as pd
 from gymnasium.spaces import Box
 
+import gymnasium as gym
+import numpy as np
+import pandas as pd
+from gymnasium.spaces import Box
+
 class PaperBasedEconomyEnv(gym.Env):
     def __init__(
         self,
@@ -175,7 +180,8 @@ class PaperBasedEconomyEnv(gym.Env):
             'Lag_y2': [output_gap_t2],
             'Lag_pi1': [inflation_t1],
             'Lag_pi2': [inflation_t2],
-            'Lag_i1': [interest_rate_t1]
+            'Lag_i1': [interest_rate_t1],
+            'Lag_i2': [interest_rate_t2]
         })
 
         # Predict the next inflation
@@ -240,6 +246,11 @@ class PaperBasedEconomyEnv(gym.Env):
 # ----------------------------
 if __name__ == "__main__":
 
+    Mock_df =pd.DataFrame({'Inflation_Rate (%)':[1,2,3,4],
+             'Avg_Interest_Rate' : [5,6,7,8],
+             'Output_gap (%)' : [9,10,11,12]
+    })
+
     # Suppose model_y and model_pi are scikit-learn models, e.g.:
     # model_y = LinearRegression().fit(X_y, y_y)
     # model_pi = LinearRegression().fit(X_pi, y_pi)
@@ -256,7 +267,7 @@ if __name__ == "__main__":
     mock_model_y = MockModel()
     mock_model_pi = MockModel()
 
-    env = PaperBasedEconomyEnv( historical_df = Env_df,
+    env = PaperBasedEconomyEnv( historical_df = Mock_df,
                                 model_y = mock_model_y,
                                 model_pi = mock_model_pi, 
                                 lookback_periods = 2)
@@ -265,6 +276,6 @@ if __name__ == "__main__":
     for step_i in range(10):
         action = env.action_space.sample()  # Random interest rate
         state, reward, done, truncated, info = env.step(action)
-        #print(f"Step={step_i}, State={state}, Reward={reward}, Truncated={truncated}, Done={done}")
+        print(f"Step={step_i}, State={state}, Reward={reward}, Truncated={truncated}, Done={done}")
         if done:
             break
