@@ -13,8 +13,8 @@ This repository contains the implementation of models and simulations used to op
 - **`ANN.ipynb`**: Artificial Neural Network (ANN) implementation for approximating the relationships between macroeconomic variables.
 
 ### Python Scripts
-- **`ann_train.py`**: Script to train the Artificial Neural Network model separately.
-- **`ols_train.py`**: Script to train the linear SVAR model.
+- **`ann_train.py`**: Script to train the agent on a Artificial Neural Network environment quickly.
+- **`ols_train.py`**: Script to train the agent on a OLS environment quickly.
 - **`PaperEnv.py`**: The custom Gymnasium environment (`PaperBasedEconomyEnv`) implemented in a standalone script.
 - **`ANN.py`**: Contains helper functions and utilities for ANN training and evaluation.
 
